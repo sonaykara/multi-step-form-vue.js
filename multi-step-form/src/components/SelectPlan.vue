@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div >
     <div class="main">
       <div class="container">
         <!-- left side -->
@@ -55,8 +55,9 @@
           ></switch-button>
         </div>
         <div class="btn-area">
-          <nex-button></nex-button>
-          <back-button></back-button>
+          <back-button @click="prevPage"></back-button>
+          <nex-button @click="nextPage"></nex-button>
+          
         </div>
       </div>
     </div>
@@ -73,13 +74,21 @@ import BackButton from "./button/BackButton.vue";
 export default {
   data() {
     return {
-      currentComponent: YearlyPlan,
+      currentComponent: MonthlyPlan,
     };
   },
   methods: {
     handleSelectedPlan(selectedComponent) {
       this.currentComponent = selectedComponent;
     },
+
+    nextPage () {
+      this.$router.push({ name : 'addons'})
+    },
+
+    prevPage () {
+      this.$router.go(-1)
+    }
   },
   components: {
     SwitchButton,

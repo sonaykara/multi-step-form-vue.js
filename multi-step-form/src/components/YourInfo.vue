@@ -34,13 +34,13 @@
                 <div class="step-text"><strong>SUMMARY</strong></div>
               </div>
             </div>
-            <!-- <img src="/multi-step-form/src/assets/bg-sidebar-desktop.svg" alt=""> -->
+           
           </div>
         </div>
 
-        <!-- right side -->
+      
 
-        <div></div>
+       
       </div>
 
       <!-- input-area -->
@@ -67,16 +67,19 @@
             <div class="label"><label for="">Phone</label></div>
             <div class="inp"><input type="text" /></div>
           </div>
+
+          <div class="btn-area" >
+            <next-button @click="nextPage"></next-button>
+          </div>
         </div>
       </div>
     </div>
-    <div>
-      <next-button @click="handle"></next-button>
-    </div>
+    
   </div>
 </template>
 
 <script>
+
 import NextButton from "./button/NextButton.vue";
 export default {
   components: {
@@ -84,8 +87,8 @@ export default {
   },
 
   methods: {
-    handle() {
-      console.log("tıklandı");
+    nextPage() {
+      this.$router.push({name : 'selectplan' })
     },
   },
 };

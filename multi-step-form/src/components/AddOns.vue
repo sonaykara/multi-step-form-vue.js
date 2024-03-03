@@ -53,7 +53,7 @@
             corrupti!
           </p>
 
-          <div class="checkbox-area">
+          <div class="checkbox-area ">
             <div class="inp inp-checkbox"><input type="checkbox" /></div>
             <div class="label label-checkbox label-checkbox-color">
               <div class="label-area">
@@ -85,16 +85,41 @@
               <div>Custom theme on your profile</div>
             </div>
           </div>
+          <div class="btn-area ">
+            <back-button @click="prevPage"></back-button>
+            <next-button @click="nextPage"></next-button>
+            
+          </div>
         </div>
       </div>
     </div>
 
-    <div></div>
+   
   </div>
 </template>
 
 <script>
-export default {};
+import BackButton from './button/BackButton.vue';
+import NextButton from './button/NextButton.vue';
+
+export default {
+  components: { 
+    BackButton,
+    NextButton
+  },
+
+  methods: {
+    nextPage () {
+      this.$router.push({ name : 'summary'})
+    },
+
+    prevPage () {
+      this.$router.go(-1)
+    }
+  },
+
+
+};
 </script>
 
 <style lang="scss" scoped></style>

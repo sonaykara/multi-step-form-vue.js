@@ -15,6 +15,7 @@
     margin-top: 2rem;
 }
 
+
 .label {
     margin-bottom: 0.5rem;
     color: rgb(84, 84, 189);
@@ -161,10 +162,6 @@
 
 
 
-
-
-
-
   /* switch-button */
 
   .slideThree {
@@ -179,7 +176,7 @@
 }
 
 .slideThree:after {
-    content: 'Yearly';
+    content: 'Monthly';
     color: red;
     position: absolute;
     right: 10px;
@@ -190,7 +187,7 @@
 }
 
 .slideThree:before {
-    content: 'Monthly';
+    content: 'Yearly';
     color: red;
     position: absolute;
     left: 10px;
@@ -227,5 +224,6 @@
 .btn-area {
     display: flex;
     justify-content: space-between;
+    
 }
 

@@ -1,21 +1,14 @@
 <template>
   <div>
-    <SelectPlan></SelectPlan>
-    <!-- <your-info></your-info>
-        <AddOns></AddOns> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import SelectPlan from "../SelectPlan.vue";
-// import YourInfo from "../YourInfo.vue";
-// import AddOns from "../AddOns.vue"
 
 export default {
   components: {
-    SelectPlan,
-    //   YourInfo,
-    //   AddOns,
+    
   },
 };
 </script>
