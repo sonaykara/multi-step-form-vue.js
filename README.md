@@ -51,6 +51,8 @@ This project showcases a Carousel component developed with Vue.js, allowing user
 <br>
 <a name="getting-started"></a>
 ## Getting Started
+<br>
 1. Install dependencies: `npm install` or `yarn install`
+<br>
 2. Start the app: `npm run dev`
 
