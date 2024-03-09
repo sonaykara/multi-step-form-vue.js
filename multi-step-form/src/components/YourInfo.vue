@@ -55,21 +55,21 @@
 
           <div>
             <div class="label"><label for="">Name</label></div>
-            <div class="inp"><input type="text" /></div>
+            <div class="inp"><input type="text" v-model="information.name" /></div>
           </div>
 
           <div>
             <div class="label"><label for="">E-mail</label></div>
-            <div class="inp"><input type="text" /></div>
+            <div class="inp"><input type="text" v-model="information.email" /></div>
           </div>
 
           <div>
             <div class="label"><label for="">Phone</label></div>
-            <div class="inp"><input type="text" /></div>
+            <div class="inp"><input type="text" v-model="information.phone" /></div>
           </div>
 
           <div class="btn-area" >
-            <next-button @click="nextPage"></next-button>
+            <next-button @click="nextPage()"></next-button>
           </div>
         </div>
       </div>
@@ -81,15 +81,32 @@
 <script>
 
 import NextButton from "./button/NextButton.vue";
+import { mapMutations } from 'vuex';
 export default {
+  data() {
+    return {
+  
+
+      information : {
+        name : "",
+        email : "",
+        phoneNumber : ""
+
+      }
+    }
+  },
   components: {
     NextButton,
   },
 
   methods: {
+   
+    ...mapMutations(['addToİnformatin']),
     nextPage() {
-      this.$router.push({name : 'selectplan' })
+      this.$router.push({ name: 'selectplan' });
+      this.addToİnformatin({information : this.information})
     },
+
   },
 };
 </script>

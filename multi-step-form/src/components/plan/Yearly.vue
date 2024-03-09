@@ -1,6 +1,6 @@
 <template>
-  <div class="main">
-    <div class="plan">
+  <div class="main" >
+    <div class="plan" @click="handle">
       <img src=".././../assest/ımg.svg/icon-arcade.svg" alt="" />
       <p>Arcade</p>
       <p>$9/mo</p>
@@ -16,13 +16,14 @@
       <img src=".././../assest/ımg.svg/icon-pro.svg" alt="" />
       <p>Pro</p>
       <p>$15/mo</p>
-      <input type="text" style="display: none" value="15" />
+      <input type="text" style="display: none" value="15"  ref="inp"/>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style lang="scss" scoped></style>
