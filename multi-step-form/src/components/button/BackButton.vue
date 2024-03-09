@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="btn btn-next">Go Back</button>
+    <button class="btn btn-next">Go Previous Step</button>
   </div>
 </template>
 

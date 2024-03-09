@@ -7,7 +7,7 @@
         <div class="left-panel">
           <div class="left-panel-content">
             <div class="flex-item">
-              <div><span>1</span></div>
+              <div><span class="active">1</span></div>
               <div class="flex-item-col">
                 <div class="step">STEP 1</div>
                 <div class="step-text"><strong>YOUR INFO</strong></div>
@@ -34,19 +34,14 @@
                 <div class="step-text"><strong>SUMMARY</strong></div>
               </div>
             </div>
-           
           </div>
         </div>
-
-      
-
-       
       </div>
 
       <!-- input-area -->
       <div class="info-area">
         <div class="input-area">
-          <h1>PERSONAL INFO</h1>
+          <h1>Pesonal Info</h1>
 
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -55,58 +50,68 @@
 
           <div>
             <div class="label"><label for="">Name</label></div>
-            <div class="inp"><input type="text" v-model="information.name" /></div>
+            <div class="inp">
+              <input
+                type="text"
+                v-model="information.name"
+                placeholder="Your Name"
+              />
+            </div>
           </div>
 
           <div>
             <div class="label"><label for="">E-mail</label></div>
-            <div class="inp"><input type="text" v-model="information.email" /></div>
+            <div class="inp">
+              <input
+                type="text"
+                v-model="information.email"
+                placeholder="Your E-mail"
+              />
+            </div>
           </div>
 
           <div>
             <div class="label"><label for="">Phone</label></div>
-            <div class="inp"><input type="text" v-model="information.phone" /></div>
+            <div class="inp">
+              <input
+                type="text"
+                v-model="information.phone"
+                placeholder="Phobe Number"
+              />
+            </div>
           </div>
 
-          <div class="btn-area" >
+          <div class="btn-area">
             <next-button @click="nextPage()"></next-button>
           </div>
         </div>
       </div>
     </div>
-    
   </div>
 </template>
 
 <script>
-
 import NextButton from "./button/NextButton.vue";
-import { mapMutations } from 'vuex';
+
 export default {
   data() {
     return {
-  
-
-      information : {
-        name : "",
-        email : "",
-        phoneNumber : ""
-
-      }
-    }
+      information: {
+        name: "",
+        email: "",
+        phoneNumber: "",
+      },
+    };
   },
   components: {
     NextButton,
   },
 
   methods: {
-   
-    ...mapMutations(['addToİnformatin']),
     nextPage() {
-      this.$router.push({ name: 'selectplan' });
-      this.addToİnformatin({information : this.information})
+      this.$router.push({ name: "selectplan" });
+      this.addToİnformatin({ information: this.information });
     },
-
   },
 };
 </script>

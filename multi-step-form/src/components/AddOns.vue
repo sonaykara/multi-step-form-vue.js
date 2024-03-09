@@ -21,7 +21,7 @@
               </div>
             </div>
             <div class="flex-item">
-              <div><span>3</span></div>
+              <div><span class="active">3</span></div>
               <div class="flex-item-col">
                 <div class="step">STEP 3</div>
                 <div class="step-text"><strong>ADD-ONS</strong></div>
@@ -34,7 +34,6 @@
                 <div class="step-text"><strong>SUMMARY</strong></div>
               </div>
             </div>
-            <!-- <img src="/multi-step-form/src/assets/bg-sidebar-desktop.svg" alt=""> -->
           </div>
         </div>
 
@@ -53,7 +52,7 @@
             corrupti!
           </p>
 
-          <div class="checkbox-area ">
+          <div class="checkbox-area">
             <div class="inp inp-checkbox"><input type="checkbox" /></div>
             <div class="label label-checkbox label-checkbox-color">
               <div class="label-area">
@@ -85,40 +84,35 @@
               <div>Custom theme on your profile</div>
             </div>
           </div>
-          <div class="btn-area ">
+          <div class="btn-area">
             <back-button @click="prevPage"></back-button>
             <next-button @click="nextPage"></next-button>
-            
           </div>
         </div>
       </div>
     </div>
-
-   
   </div>
 </template>
 
 <script>
-import BackButton from './button/BackButton.vue';
-import NextButton from './button/NextButton.vue';
+import BackButton from "./button/BackButton.vue";
+import NextButton from "./button/NextButton.vue";
 
 export default {
-  components: { 
+  components: {
     BackButton,
-    NextButton
+    NextButton,
   },
 
   methods: {
-    nextPage () {
-      this.$router.push({ name : 'summary'})
+    nextPage() {
+      this.$router.push({ name: "summary" });
     },
 
-    prevPage () {
-      this.$router.go(-1)
-    }
+    prevPage() {
+      this.$router.go(-1);
+    },
   },
-
-
 };
 </script>
 

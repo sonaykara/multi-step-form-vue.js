@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <div class="main">
       <div class="container">
         <!-- left side -->
@@ -13,7 +13,7 @@
               </div>
             </div>
             <div class="flex-item">
-              <div><span>2</span></div>
+              <div><span class="active">2</span></div>
               <div class="flex-item-col">
                 <div class="step">STEP 2</div>
                 <div class="step-text"><strong>SELECT PLAN</strong></div>
@@ -33,7 +33,6 @@
                 <div class="step-text"><strong>SUMMARY</strong></div>
               </div>
             </div>
-        
           </div>
         </div>
       </div>
@@ -57,7 +56,6 @@
         <div class="btn-area">
           <back-button @click="prevPage"></back-button>
           <nex-button @click="nextPage"></nex-button>
-          
         </div>
       </div>
     </div>
@@ -65,8 +63,8 @@
 </template>
 
 <script>
-import YearlyPlan from "./plan/Yearly.vue";
-import MonthlyPlan from "./plan/Monthly.vue";
+import YearlyPlan from "./plan/Monthly.vue";
+import MonthlyPlan from "./plan/Yearly.vue";
 import SwitchButton from "./button/SwitchPlanButton.vue";
 import NexButton from "./button/NextButton.vue";
 import BackButton from "./button/BackButton.vue";
@@ -82,13 +80,13 @@ export default {
       this.currentComponent = selectedComponent;
     },
 
-    nextPage () {
-      this.$router.push({ name : 'addons'})
+    nextPage() {
+      this.$router.push({ name: "addons" });
     },
 
-    prevPage () {
-      this.$router.go(-1)
-    }
+    prevPage() {
+      this.$router.go(-1);
+    },
   },
   components: {
     SwitchButton,

@@ -1,29 +1,28 @@
 <template>
-  <div class="main" >
-    <div class="plan" @click="handle">
+  <div class="main">
+    <div class="plan">
       <img src=".././../assest/ımg.svg/icon-arcade.svg" alt="" />
       <p>Arcade</p>
-      <p>$9/mo</p>
-      <input type="text" style="display: none" value="9" />
+      <p>2 months free</p>
+      <p>$90/yr</p>
     </div>
     <div class="plan">
       <img src=".././../assest/ımg.svg/icon-advanced.svg" alt="" />
       <p>Advanced</p>
-      <p>$12/mo</p>
-      <input type="text" style="display: none" value="12" />
+      <p>2 months free</p>
+      <p>$120/yr</p>
     </div>
     <div class="plan">
       <img src=".././../assest/ımg.svg/icon-pro.svg" alt="" />
       <p>Pro</p>
-      <p>$15/mo</p>
-      <input type="text" style="display: none" value="15"  ref="inp"/>
+      <p>2 months free</p>
+      <p>$150/yr</p>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,22 +1,19 @@
 <template>
   <div class="main">
-    <div class="plan">
+    <div class="plan" @click="handle">
       <img src=".././../assest/ımg.svg/icon-arcade.svg" alt="" />
       <p>Arcade</p>
-      <p>$90/yr</p>
-      <input type="text" style="display: none" value="90" />
+      <p>$9/mo</p>
     </div>
     <div class="plan">
       <img src=".././../assest/ımg.svg/icon-advanced.svg" alt="" />
       <p>Advanced</p>
-      <p>$120/yr</p>
-      <input type="text" style="display: none" value="120" />
+      <p>$12/mo</p>
     </div>
     <div class="plan">
       <img src=".././../assest/ımg.svg/icon-pro.svg" alt="" />
       <p>Pro</p>
-      <p>$150/yr</p>
-      <input type="text" style="display: none" value="150" />
+      <p>$15/mo</p>
     </div>
   </div>
 </template>

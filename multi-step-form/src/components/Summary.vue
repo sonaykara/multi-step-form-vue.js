@@ -27,47 +27,45 @@
               </div>
             </div>
             <div class="flex-item">
-              <div><span>4</span></div>
+              <div><span class="active">4</span></div>
               <div class="flex-item-col">
                 <div class="step">STEP 4</div>
                 <div class="step-text"><strong>SUMMARY</strong></div>
               </div>
             </div>
-        
           </div>
         </div>
       </div>
       <div class="summary-area">
-          <div>
-            <h1>Finishing Up</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, assumenda!</p>
-            <div style="width: 500px; height:500px; background-color :black;"></div>
-          </div>
+        <div>
+          <h1>Finishing Up</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi,
+            assumenda!
+          </p>
+        </div>
 
-          <div class="btn-area">
-            <back-button @click="prevPage"></back-button>
-            <confirm-button></confirm-button>
+        <div class="btn-area">
+          <back-button @click="prevPage"></back-button>
+          <confirm-button></confirm-button>
         </div>
       </div>
-    
     </div>
   </div>
 </template>
 
 <script>
-import BackButton from "./button/BackButton.vue"
-import ConfirmButton from "./button/ConfirmButton.vue"
+import BackButton from "./button/BackButton.vue";
+import ConfirmButton from "./button/ConfirmButton.vue";
 export default {
-methods: {
-  prevPage () {
-    this.$router.go(-1)
-  }
-},
-  components : {
+  methods: {
+    prevPage() {
+      this.$router.go(-1);
+    },
+  },
+  components: {
     BackButton,
-    ConfirmButton
-  }
-
-
+    ConfirmButton,
+  },
 };
 </script>
